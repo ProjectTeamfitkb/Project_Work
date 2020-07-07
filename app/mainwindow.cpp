@@ -5,13 +5,14 @@
 #include "../Personal_data/pw_personal.h"
 #include "../Geographic_data/pw_geographic.h"
 #include "../Organizational_data/pw_organizational.h"
-#include "../Financial_data/pw_financial.h"
+#include "../Financial_data/fourthwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -21,26 +22,25 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    PW_personal pers;
-    pers.exec();
+    window = new firstwindow(this);
+    window -> show();
 }
-
-
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    PW_geographic geogr;
-    geogr.exec();
+    window1 = new secondwindow(this);
+    window1 -> show();
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    PW_organizational organ;
-    organ.exec();
+   window2 = new thirdwindow(this);
+   window2 -> show();
+
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    PW_financial financ;
-    financ.exec();
+    window3 = new fourthwindow(this);
+    window3 -> show();
 }

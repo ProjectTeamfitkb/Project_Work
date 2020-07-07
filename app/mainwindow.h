@@ -1,7 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QInputDialog>
 #include <QMainWindow>
+
+#include "../Personal_data/firstwindow.h"
+#include "../Geographic_data/secondwindow.h"
+#include "../Organizational_data/thirdwindow.h"
+#include "../Financial_data/fourthwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,5 +31,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    firstwindow *window;
+    secondwindow *window1;
+    thirdwindow *window2;
+    fourthwindow *window3;
+
+
 };
 #endif // MAINWINDOW_H

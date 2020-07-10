@@ -31,6 +31,8 @@ FORMS += \
     pw_organizational.ui \
     thirdwindow.ui
 
+RESOURCES = Organ.txt
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

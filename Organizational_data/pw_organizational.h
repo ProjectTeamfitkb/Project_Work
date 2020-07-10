@@ -15,6 +15,7 @@ public:
     PW_organizational(QWidget *parent = nullptr);
     ~PW_organizational();
 
+
 private:
     Ui::PW_organizational *ui;
 };

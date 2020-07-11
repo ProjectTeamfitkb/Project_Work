@@ -23,7 +23,7 @@ thirdwindow::~thirdwindow()
 void thirdwindow::conclusionRandStr()
 {
     //Запись случайной строки в новый файл на диске D
-    QString fileName = "D:/Create.txt";
+    QString fileName = "Create.txt";
     QFile mFile(fileName);
     QTextStream stream(&mFile);
     mFile.open(QFile::ReadOnly | QFile::Text);
@@ -35,13 +35,13 @@ void thirdwindow::conclusionRandStr()
 //генерация случайной строки из файла по нажатию кнопки
 void thirdwindow::on_pushButton_clicked()
 {
-    //QString link = QApplication::applicationDirPath()+"D:/GitHubPr/Project_Work/Organ.txt";
+
     ofstream writerandstr;
 
 
     string way = "Organ.txt";
 
-    writerandstr.open("D:/Create.txt", ofstream :: trunc);
+    writerandstr.open("Create.txt", ofstream :: trunc);
 
     //Генерация рандомной строки из выбранного файла
     ifstream fin(way);
@@ -68,7 +68,7 @@ void thirdwindow::on_pushButton_2_clicked()
 {
     ofstream writerandstr;
 
-    writerandstr.open("D:/Create.txt", ofstream :: trunc);
+    writerandstr.open("Create.txt", ofstream :: trunc);
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                     "/home",
                                                     tr("Images (*.png *.txt *.jpg)"));

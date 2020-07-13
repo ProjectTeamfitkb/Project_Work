@@ -1,21 +1,11 @@
 #include "thirdwindow.h"
 #include "ui_thirdwindow.h"
-#include <QDir>
-#include <QFile>
-#include <QTextStream>
-#include <iostream>
-#include <QDebug>
-#include <QVector>
-#include <iostream>
-#include <windows.h>
-#include <ctime>
-#include <cstdlib>
-#include <string>
-#include <fstream>
-#include <vector>
+#include "../objects/objects.h"
+
 #include <QDialog>
 #include <QFileDialog>
 #include <QApplication>
+#include <QtGui>
 
 using namespace std;
 
@@ -47,9 +37,7 @@ void thirdwindow::conclusionRandStr()
 //генерация случайной строки из файла по нажатию кнопки
 void thirdwindow::on_pushButton_clicked()
 {
-
     ofstream writerandstr;
-
 
     string way = "Organ.txt";
 
@@ -58,19 +46,22 @@ void thirdwindow::on_pushButton_clicked()
     //Генерация рандомной строки из выбранного файла
     ifstream fin(way);
     vector <string> read;
-
-    for (; fin;)
+    if(fin)
     {
-        string temp;
-        getline(fin, temp);
-        read.push_back(temp);
-    }
-    string randstr = read[rand() % read.size()];
-    read.pop_back();
+        for (; fin;)
+        {
+            string temp;
+            getline(fin, temp);
+            read.push_back(temp);
+        }
 
-    writerandstr << randstr << endl;
-    writerandstr << endl;
+        string randstr = read[rand() % (read.size()-1)];
+        read.pop_back();
+
+        writerandstr << randstr;
+    }
     writerandstr.close();
+
 
     conclusionRandStr();
 
@@ -78,33 +69,8 @@ void thirdwindow::on_pushButton_clicked()
 
 void thirdwindow::on_pushButton_2_clicked()
 {
-    ofstream writerandstr;
 
-    writerandstr.open("Create.txt", ofstream :: trunc);
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
-                                                    "/home",
-                                                    tr("Images (*.png *.txt *.jpg)"));
-
-    string way = fileName.toStdString();
-
-    ifstream fin(way);
-    vector <string> read;
-
-    for (; fin;)
-    {
-        string temp;
-        getline(fin, temp);
-        read.push_back(temp);
-    }
-    string randstr = read[rand() % read.size()];
-    read.pop_back();
-
-    writerandstr << randstr << endl;
-    writerandstr << endl;
-
-
-    writerandstr.close();
-
-    conclusionRandStr();
+    win = new choice_of_generation(this);
+    win->show();
 
 }

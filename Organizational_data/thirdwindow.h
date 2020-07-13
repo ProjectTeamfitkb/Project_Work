@@ -1,7 +1,9 @@
 #ifndef THIRDWINDOW_H
 #define THIRDWINDOW_H
 
+#include "../Organizational_data/choice_of_generation.h"
 #include <QDialog>
+
 #include <QFileDialog>
 #include <QApplication>
 
@@ -26,6 +28,7 @@ private slots:
 
 private:
     Ui::thirdwindow *ui;
+    choice_of_generation *win;
 
 };
 

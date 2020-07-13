@@ -17,19 +17,19 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>50</y>
+     <y>10</y>
      <width>321</width>
-     <height>201</height>
+     <height>261</height>
     </rect>
    </property>
    <property name="title">
     <string>To generate a private data</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>150</y>
+      <y>200</y>
       <width>195</width>
       <height>30</height>
      </rect>
@@ -38,26 +38,26 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Generate</string>
+        <string>Generate Woman</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Enter data</string>
+        <string>Generate Man</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>241</width>
-      <height>101</height>
+      <x>10</x>
+      <y>20</y>
+      <width>301</width>
+      <height>171</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">

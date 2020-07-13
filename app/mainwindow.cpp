@@ -4,7 +4,7 @@
 
 #include "../Personal_data/pw_personal.h"
 #include "../Geographic_data/pw_geographic.h"
-#include "../Organizational_data/pw_organizational.h"
+
 #include "../Financial_data/fourthwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)

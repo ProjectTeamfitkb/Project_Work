@@ -20,7 +20,7 @@ firstwindow::~firstwindow()
 void firstwindow::conclusionRandStr()
 {
     //Запись случайной строки в новый файл на диске D
-    QString fileName = "Create.txt";
+    QString fileName = "Temp.txt";
     QFile mFile(fileName);
     QTextStream stream(&mFile);
     mFile.open(QFile::ReadOnly | QFile::Text);
@@ -35,9 +35,9 @@ void firstwindow::on_pushButton_clicked()
     ofstream writerandstr;
 
 
-    string way = "Jen.txt";
+    string way = "Woman.txt";
 
-    writerandstr.open("Create.txt", ofstream :: trunc);
+    writerandstr.open("Temp.txt", ofstream :: trunc);
 
     //Генерация рандомной строки из выбранного файла
     ifstream fin(way);
@@ -68,7 +68,7 @@ void firstwindow::on_pushButton_2_clicked()
 
     string way = "Man.txt";
 
-    writerandstr.open("Create.txt", ofstream :: trunc);
+    writerandstr.open("Temp.txt", ofstream :: trunc);
 
     //Генерация рандомной строки из выбранного файла
     ifstream fin(way);

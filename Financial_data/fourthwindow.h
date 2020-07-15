@@ -14,9 +14,12 @@ class fourthwindow : public QDialog
 public:
     explicit fourthwindow(QWidget *parent = nullptr);
     ~fourthwindow();
+    int random_generator(int a, int b);
+    QString generation_data(std::string file_name, int num_rand);
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_Generate_clicked();
 
 private:
     Ui::fourthwindow *ui;

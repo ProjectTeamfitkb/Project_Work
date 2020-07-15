@@ -8,4 +8,6 @@ SUBDIRS += \
     Personal_data \
     app
 
+CONFIG+=c++11
+
 CONFIG += ORDERED

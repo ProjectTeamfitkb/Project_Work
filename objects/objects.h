@@ -7,11 +7,11 @@
 #include <iostream>
 #include <QDebug>
 #include <QVector>
-#include <iostream>
 #include <windows.h>
 #include <ctime>
 #include <cstdlib>
 #include <string>
+#include <cstring>
 #include <fstream>
 #include <vector>
 

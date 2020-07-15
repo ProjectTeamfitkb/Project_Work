@@ -3,7 +3,7 @@
 
 
 #include "../Personal_data/pw_personal.h"
-#include "../Geographic_data/pw_geographic.h"
+
 
 #include "../Financial_data/fourthwindow.h"
 

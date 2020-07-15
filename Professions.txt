@@ -3,13 +3,13 @@ Programmer
 Teacher
 Mechanic
 Doctor
-Police inspector
+Policeman
 Driver
 Hairdresser
 Engineer
-Fitness trainer
+Actor
 Firefighter
-System administrator
+Cook
 Electrician
 Builder
 Loader

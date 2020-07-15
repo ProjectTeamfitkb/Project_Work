@@ -102,9 +102,13 @@ void fourthwindow::on_Generate_clicked()
     QString buf1 = generation_data(professions_data, num_professions); //
     QString buf2 = generation_data(card_data, num_card);               //
     str_output += buf1;                                                //
+    str_output += " ";                                                 //
     str_output += bank_account;                                        //
+    str_output += " ";                                                 //
     str_output += currency;                                            //
+    str_output += " ";                                                 //
     str_output += bank;                                                //
+    str_output += " ";                                                 //
     str_output += buf2;                                                //
     ui->textEdit->setText(str_output);                                 //Вывод строки-буфера на экран
 }

@@ -21,7 +21,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     implementation.cpp \
-thirdwindow.cpp\
+    thirdwindow.cpp\
     choice_of_generation.cpp
 
 

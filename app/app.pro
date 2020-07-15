@@ -15,7 +15,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
+LIBS += -L../objects/debug -lobjects
+LIBS += -L../Financial_data/debug -lFinancial_data
+LIBS += -L../Geographic_data/debug -lGeographic_data
+LIBS += -L../Organizational_data/debug -lOrganizational_data
+LIBS += -L../Personal_data/debug -lPersonal_data
 
 SOURCES += \
     main.cpp \

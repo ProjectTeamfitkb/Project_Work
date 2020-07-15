@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.9.2, 2020-07-14T22:51:35. -->
+=======
+<!-- Written by QtCreator 4.12.3, 2020-07-13T19:28:58. -->
+>>>>>>> 537d7ba7ffdb14e29ba04382397031c142dcfbea
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -22,6 +26,7 @@
      <value type="QByteArray" key="CurrentPreferences">CppGlobal</value>
     </valuemap>
    </valuemap>
+<<<<<<< HEAD
    <valuemap type="QVariantMap" key="EditorConfiguration.CodeStyle.1">
     <value type="QString" key="language">QmlJS</value>
     <valuemap type="QVariantMap" key="value">
@@ -29,6 +34,9 @@
     </valuemap>
    </valuemap>
    <value type="int" key="EditorConfiguration.CodeStyle.Count">2</value>
+=======
+   <value type="int" key="EditorConfiguration.CodeStyle.Count">1</value>
+>>>>>>> 537d7ba7ffdb14e29ba04382397031c142dcfbea
    <value type="QByteArray" key="EditorConfiguration.Codec">UTF-8</value>
    <value type="bool" key="EditorConfiguration.ConstrainTooltips">false</value>
    <value type="int" key="EditorConfiguration.IndentSize">4</value>
@@ -317,7 +325,11 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">false</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
+<<<<<<< HEAD
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/DeathHand/Documents/GitHub/build-Project_Work-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/app</value>
+=======
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
+>>>>>>> 537d7ba7ffdb14e29ba04382397031c142dcfbea
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

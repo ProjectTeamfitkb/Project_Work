@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QFileDialog>
 #include <QApplication>
+#include <QSpinBox>
+
 namespace Ui {
 class choice_of_generation;
 }
@@ -17,8 +19,6 @@ public:
     ~choice_of_generation();
 
 private slots:
- //void Organiz(bool clicked);
-
     void on_pushButton_clicked();
 
     void conclusionRandStr();

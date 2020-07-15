@@ -20,7 +20,7 @@ firstwindow::~firstwindow()
 void firstwindow::conclusionRandStr()
 {
     //Запись случайной строки в новый файл на диске D
-    QString fileName = "Create.txt";
+    QString fileName = "Temp.txt";
     QFile mFile(fileName);
     QTextStream stream(&mFile);
     mFile.open(QFile::ReadOnly | QFile::Text);
@@ -32,12 +32,12 @@ void firstwindow::conclusionRandStr()
 void firstwindow::on_pushButton_clicked()
 {
 
-    ofstream writerandstr;
+    ofstream randomstring;
 
 
-    string way = "Jen.txt";
+    string way = "Woman.txt"; //связь объект класса fstream с файлом, который будет использоваться для операций ввода-вывода;
 
-    writerandstr.open("Create.txt", ofstream :: trunc);
+    randomstring.open("Temp.txt", ofstream :: trunc); //открытие файла для временно хранения
 
     //Генерация рандомной строки из выбранного файла
     ifstream fin(way);
@@ -49,12 +49,12 @@ void firstwindow::on_pushButton_clicked()
         getline(fin, temp);
         read.push_back(temp);
     }
-    string randstr = read[rand() % read.size()];
+    string randstr = read[rand() % read.size()]; //случайный выбор элемента
     read.pop_back();
-
-    writerandstr << randstr << endl;
-    writerandstr << endl;
-    writerandstr.close();
+//вывод
+    randomstring << randstr << endl;
+    randomstring << endl;
+    randomstring.close();
 
     conclusionRandStr();
 
@@ -63,12 +63,12 @@ void firstwindow::on_pushButton_clicked()
 void firstwindow::on_pushButton_2_clicked()
 {
 
-    ofstream writerandstr;
+    ofstream randomstring;
 
 
     string way = "Man.txt";
 
-    writerandstr.open("Create.txt", ofstream :: trunc);
+    randomstring.open("Temp.txt", ofstream :: trunc);
 
     //Генерация рандомной строки из выбранного файла
     ifstream fin(way);
@@ -83,10 +83,9 @@ void firstwindow::on_pushButton_2_clicked()
     string randstr = read[rand() % read.size()];
     read.pop_back();
 
-    writerandstr << randstr << endl;
-    writerandstr << endl;
-    writerandstr.close();
+    randomstring << randstr << endl;
+    randomstring << endl;
+    randomstring.close();
 
     conclusionRandStr();
-
 }

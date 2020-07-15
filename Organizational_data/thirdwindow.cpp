@@ -1,9 +1,6 @@
 #include "thirdwindow.h"
 #include "ui_thirdwindow.h"
 #include "../objects/objects.h"
-#include <QDialog>
-#include <QFileDialog>
-#include <QApplication>
 
 using namespace std;
 
@@ -19,80 +16,42 @@ thirdwindow::~thirdwindow()
 {
     delete ui;
 }
-//
-void thirdwindow::conclusionRandStr()
+
+void thirdwindow::conclusionRandStr()//вывод сгенерированных организаций
 {
-    //Запись случайной строки в новый файл на диске D
     QString fileName = "Create.txt";
     QFile mFile(fileName);
     QTextStream stream(&mFile);
     mFile.open(QFile::ReadOnly | QFile::Text);
     QString buf = stream.readAll();
-    //Вывод это строки из файла
-    ui->textEdit->setText(buf);
+    ui->textEditr->setText(buf);
     mFile.close();
+
 }
-//генерация случайной строки из файла по нажатию кнопки
-void thirdwindow::on_pushButton_clicked()
+
+void thirdwindow::on_Enterdata_clicked()//переход к следующему окну
 {
-
-    ofstream writerandstr;
-
-
-    string way = "Organ.txt";
-
-    writerandstr.open("Create.txt", ofstream :: trunc);
-
-    //Генерация рандомной строки из выбранного файла
-    ifstream fin(way);
-    vector <string> read;
-
-    for (; fin;)
-    {
-        string temp;
-        getline(fin, temp);
-        read.push_back(temp);
-    }
-    string randstr = read[rand() % read.size()];
-    read.pop_back();
-
-    writerandstr << randstr << endl;
-    writerandstr << endl;
-    writerandstr.close();
-
-    conclusionRandStr();
+    win = new choice_of_generation(this);
+    win->show();
 
 }
 
-void thirdwindow::on_pushButton_2_clicked()
+
+void thirdwindow::on_Gener_clicked()//генерация нескольких организаций
 {
-    ofstream writerandstr;
-
-    writerandstr.open("Create.txt", ofstream :: trunc);
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
-                                                    "/home",
-                                                    tr("Images (*.png *.txt *.jpg)"));
-
-    string way = fileName.toStdString();
-
-    ifstream fin(way);
-    vector <string> read;
-
-    for (; fin;)
+    int k = ui->spinBox->value();//переменая, отвечающая за количество файлов
+    string Way = "NameOrg.txt";
+    string Way3 = "Staff.txt";
+    string Way2 = "Street.txt";
+    string Way4 = "Industry.txt";
+    for (int i = 0; i<k; i++)
     {
-        string temp;
-        getline(fin, temp);
-        read.push_back(temp);
+        generationOrg(Way,Way2,Way3,Way4);
     }
-    string randstr = read[rand() % read.size()];
-    read.pop_back();
-
-    writerandstr << randstr << endl;
-    writerandstr << endl;
-
-
-    writerandstr.close();
-
     conclusionRandStr();
+    ofstream writerandstr;
+    writerandstr.open("Create.txt");
 
 }
+
+

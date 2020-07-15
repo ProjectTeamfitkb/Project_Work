@@ -14,9 +14,14 @@ class firstwindow : public QDialog
 public:
     explicit firstwindow(QWidget *parent = nullptr);
     ~firstwindow();
+     void conclusionRandStr();
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+
 
 private:
     Ui::firstwindow *ui;

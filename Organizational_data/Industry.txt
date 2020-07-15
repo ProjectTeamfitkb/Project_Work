@@ -1,0 +1,5 @@
+Industry: metallurgy
+Industry: energy
+Industry: engineering
+Industry: delivery service
+Industry: wholesale

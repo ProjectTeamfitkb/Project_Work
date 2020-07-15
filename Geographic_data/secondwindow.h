@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void conclusionRandStr();
 
 private:
     Ui::secondwindow *ui;

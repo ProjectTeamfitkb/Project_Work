@@ -20,18 +20,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    pw_organizational.cpp \
-    thirdwindow.cpp
+    implementation.cpp \
+thirdwindow.cpp\
+    choice_of_generation.cpp
+
+
 
 HEADERS += \
-    pw_organizational.h \
-    thirdwindow.h
+    thirdwindow.h\
+    choice_of_generation.h
+
 
 FORMS += \
-    pw_organizational.ui \
-    thirdwindow.ui
+thirdwindow.ui\
+    choice_of_generation.ui
 
-RESOURCES = Organ.txt
+
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

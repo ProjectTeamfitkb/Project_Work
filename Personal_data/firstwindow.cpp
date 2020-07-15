@@ -89,3 +89,33 @@ void firstwindow::on_pushButton_2_clicked()
 
     conclusionRandStr();
 }
+
+void firstwindow::on_pushButton_3_clicked()
+{
+
+    ofstream randomstring;
+
+
+    string way = "Manandwoman.txt";
+
+    randomstring.open("Temp.txt", ofstream :: trunc);
+
+    //Генерация рандомной строки из выбранного файла
+    ifstream fin(way);
+    vector <string> read;
+
+    for (; fin;)
+    {
+        string temp;
+        getline(fin, temp);
+        read.push_back(temp);
+    }
+    string randstr = read[rand() % read.size()];
+    read.pop_back();
+
+    randomstring << randstr << endl;
+    randomstring << endl;
+    randomstring.close();
+
+    conclusionRandStr();
+}

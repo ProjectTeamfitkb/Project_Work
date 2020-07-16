@@ -3,3 +3,8 @@ Industry: energy
 Industry: engineering
 Industry: delivery service
 Industry: wholesale
+Industry: medical 
+Industry: nutritional
+Industry: forest
+Industry: chemical and petrochemical
+Industry: microbiological
